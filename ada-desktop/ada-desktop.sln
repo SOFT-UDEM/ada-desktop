@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ada-desktop", "ada-desktop\ada-desktop.csproj", "{AA07D7DE-FF16-4855-80DE-03566FA07573}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Datos", "Datos\Datos.csproj", "{F4DBDF1E-C5D1-44C9-B124-FA0AE6018F1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Forms", "..\Equipos_Tecnologicos\Forms.csproj", "{0A8BD9C2-B714-41E3-BD97-60267690BF8E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA07D7DE-FF16-4855-80DE-03566FA07573}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA07D7DE-FF16-4855-80DE-03566FA07573}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA07D7DE-FF16-4855-80DE-03566FA07573}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA07D7DE-FF16-4855-80DE-03566FA07573}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4DBDF1E-C5D1-44C9-B124-FA0AE6018F1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4DBDF1E-C5D1-44C9-B124-FA0AE6018F1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4DBDF1E-C5D1-44C9-B124-FA0AE6018F1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4DBDF1E-C5D1-44C9-B124-FA0AE6018F1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A8BD9C2-B714-41E3-BD97-60267690BF8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A8BD9C2-B714-41E3-BD97-60267690BF8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A8BD9C2-B714-41E3-BD97-60267690BF8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A8BD9C2-B714-41E3-BD97-60267690BF8E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E853747A-DBD4-44BC-AF1C-99775D0DBFFF}
+	EndGlobalSection
+EndGlobal
