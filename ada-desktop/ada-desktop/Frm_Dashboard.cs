@@ -50,5 +50,12 @@ namespace ada_desktop
         {
 
         }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            Frm_Reports reports = new Frm_Reports();
+            reports.MdiParent = this;
+            reports.Show();
+        }
     }
 }

@@ -36,13 +36,13 @@ namespace Equipos_Tecnologicos
             this.txt_apell = new System.Windows.Forms.TextBox();
             this.txt_name = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.txt_cargo = new System.Windows.Forms.TextBox();
-            this.txt_area = new System.Windows.Forms.TextBox();
-            this.txt_iden = new System.Windows.Forms.TextBox();
-            this.txt_idarea = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.txt_obse = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txt_idarea = new System.Windows.Forms.Label();
+            this.txt_iden = new System.Windows.Forms.TextBox();
+            this.txt_area = new System.Windows.Forms.TextBox();
+            this.txt_cargo = new System.Windows.Forms.TextBox();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
@@ -119,6 +119,54 @@ namespace Equipos_Tecnologicos
             this.panel2.Size = new System.Drawing.Size(776, 194);
             this.panel2.TabIndex = 2;
             // 
+            // txt_obse
+            // 
+            this.txt_obse.AutoSize = true;
+            this.txt_obse.Location = new System.Drawing.Point(413, 113);
+            this.txt_obse.Name = "txt_obse";
+            this.txt_obse.Size = new System.Drawing.Size(67, 13);
+            this.txt_obse.TabIndex = 21;
+            this.txt_obse.Text = "Observación";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(4, 120);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(70, 13);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Identificación";
+            // 
+            // txt_idarea
+            // 
+            this.txt_idarea.AutoSize = true;
+            this.txt_idarea.Location = new System.Drawing.Point(440, 72);
+            this.txt_idarea.Name = "txt_idarea";
+            this.txt_idarea.Size = new System.Drawing.Size(40, 13);
+            this.txt_idarea.TabIndex = 19;
+            this.txt_idarea.Text = "Id área";
+            // 
+            // txt_iden
+            // 
+            this.txt_iden.Location = new System.Drawing.Point(81, 113);
+            this.txt_iden.Name = "txt_iden";
+            this.txt_iden.Size = new System.Drawing.Size(244, 20);
+            this.txt_iden.TabIndex = 18;
+            // 
+            // txt_area
+            // 
+            this.txt_area.Location = new System.Drawing.Point(486, 73);
+            this.txt_area.Name = "txt_area";
+            this.txt_area.Size = new System.Drawing.Size(244, 20);
+            this.txt_area.TabIndex = 17;
+            // 
+            // txt_cargo
+            // 
+            this.txt_cargo.Location = new System.Drawing.Point(486, 29);
+            this.txt_cargo.Name = "txt_cargo";
+            this.txt_cargo.Size = new System.Drawing.Size(244, 20);
+            this.txt_cargo.TabIndex = 16;
+            // 
             // btnGuardar
             // 
             this.btnGuardar.BackColor = System.Drawing.SystemColors.MenuHighlight;
@@ -132,54 +180,6 @@ namespace Equipos_Tecnologicos
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // txt_cargo
-            // 
-            this.txt_cargo.Location = new System.Drawing.Point(486, 29);
-            this.txt_cargo.Name = "txt_cargo";
-            this.txt_cargo.Size = new System.Drawing.Size(244, 20);
-            this.txt_cargo.TabIndex = 16;
-            // 
-            // txt_area
-            // 
-            this.txt_area.Location = new System.Drawing.Point(486, 73);
-            this.txt_area.Name = "txt_area";
-            this.txt_area.Size = new System.Drawing.Size(244, 20);
-            this.txt_area.TabIndex = 17;
-            // 
-            // txt_iden
-            // 
-            this.txt_iden.Location = new System.Drawing.Point(81, 113);
-            this.txt_iden.Name = "txt_iden";
-            this.txt_iden.Size = new System.Drawing.Size(244, 20);
-            this.txt_iden.TabIndex = 18;
-            // 
-            // txt_idarea
-            // 
-            this.txt_idarea.AutoSize = true;
-            this.txt_idarea.Location = new System.Drawing.Point(440, 72);
-            this.txt_idarea.Name = "txt_idarea";
-            this.txt_idarea.Size = new System.Drawing.Size(40, 13);
-            this.txt_idarea.TabIndex = 19;
-            this.txt_idarea.Text = "Id área";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(4, 120);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 13);
-            this.label5.TabIndex = 20;
-            this.label5.Text = "Identificación";
-            // 
-            // txt_obse
-            // 
-            this.txt_obse.AutoSize = true;
-            this.txt_obse.Location = new System.Drawing.Point(413, 113);
-            this.txt_obse.Name = "txt_obse";
-            this.txt_obse.Size = new System.Drawing.Size(67, 13);
-            this.txt_obse.TabIndex = 21;
-            this.txt_obse.Text = "Observación";
             // 
             // panel1
             // 
@@ -208,6 +208,7 @@ namespace Equipos_Tecnologicos
             this.Name = "Frm_addemployes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Empleados";
+            this.Load += new System.EventHandler(this.Frm_addemployes_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);

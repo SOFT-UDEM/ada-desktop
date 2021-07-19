@@ -44,7 +44,11 @@ namespace Equipos_Tecnologicos
 
         private void Frm_AddAreas_Load(object sender, EventArgs e)
         {
-
+            using (bdsoftEntities db = new bdsoftEntities())
+            {
+                dataGridView1.DataSource = db.Areas.ToList();
+                dataGridView1.Columns["Empleados"].Visible = false;
+            }
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)

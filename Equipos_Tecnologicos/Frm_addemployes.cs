@@ -44,5 +44,13 @@ namespace Equipos_Tecnologicos
                 MessageBox.Show("Ocurrio el error " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void Frm_addemployes_Load(object sender, EventArgs e)
+        {
+            using (bdsoftEntities db = new bdsoftEntities())
+            {
+                dataGridView1.DataSource = db.Empleados.ToList();
+            }
+        }
     }
 }

@@ -48,6 +48,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -60,6 +61,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Encrypt.cs" />
+    <Compile Include="Frm_Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Reports.Designer.cs">
+      <DependentUpon>Frm_Reports.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +89,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmAdministrarUsuarios.resx">
       <DependentUpon>FrmAdministrarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Reports.resx">
+      <DependentUpon>Frm_Reports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Dashboard.resx">
       <DependentUpon>Frm_Dashboard.cs</DependentUpon>
@@ -122,6 +132,9 @@
       <Project>{f4dbdf1e-c5d1-44c9-b124-fa0ae6018f1c}</Project>
       <Name>Datos</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
