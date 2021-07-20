@@ -81,6 +81,7 @@ namespace ada_desktop
                         db.SaveChanges();
                         dtg.DataSource = db.Usuarios.ToList();
                         dtg.Columns["EquiposTecnologicos"].Visible = false;
+                        dtg.Columns["Password"].Visible = false;
                         MessageBox.Show("Usuario guardardo correctamente", "Felicitaciones", MessageBoxButtons.OK,MessageBoxIcon.Information);
                     }
                 }
@@ -99,7 +100,7 @@ namespace ada_desktop
 
                 dtg.DataSource = db.Usuarios.ToList();
                 dtg.Columns["EquiposTecnologicos"].Visible = false;
-
+                dtg.Columns["Password"].Visible = false;
             }
 
         }
