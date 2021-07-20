@@ -104,6 +104,7 @@
             // txtObservacion
             // 
             this.txtObservacion.Location = new System.Drawing.Point(536, 122);
+            this.txtObservacion.MaxLength = 100;
             this.txtObservacion.Name = "txtObservacion";
             this.txtObservacion.Size = new System.Drawing.Size(271, 20);
             this.txtObservacion.TabIndex = 13;
@@ -111,6 +112,7 @@
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(536, 87);
+            this.txtPassword.MaxLength = 64;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(271, 20);
             this.txtPassword.TabIndex = 12;
@@ -119,6 +121,7 @@
             // txtUsuario
             // 
             this.txtUsuario.Location = new System.Drawing.Point(67, 83);
+            this.txtUsuario.MaxLength = 64;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(271, 20);
             this.txtUsuario.TabIndex = 11;
@@ -126,6 +129,7 @@
             // txtCargo
             // 
             this.txtCargo.Location = new System.Drawing.Point(67, 41);
+            this.txtCargo.MaxLength = 64;
             this.txtCargo.Name = "txtCargo";
             this.txtCargo.Size = new System.Drawing.Size(271, 20);
             this.txtCargo.TabIndex = 9;
@@ -133,6 +137,7 @@
             // txtApellidos
             // 
             this.txtApellidos.Location = new System.Drawing.Point(536, 12);
+            this.txtApellidos.MaxLength = 64;
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(271, 20);
             this.txtApellidos.TabIndex = 8;
@@ -140,6 +145,7 @@
             // txtNombres
             // 
             this.txtNombres.Location = new System.Drawing.Point(67, 6);
+            this.txtNombres.MaxLength = 64;
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.Size = new System.Drawing.Size(271, 20);
             this.txtNombres.TabIndex = 7;
@@ -229,6 +235,7 @@
             // 
             this.comboBoxRoles.FormattingEnabled = true;
             this.comboBoxRoles.Location = new System.Drawing.Point(536, 48);
+            this.comboBoxRoles.MaxLength = 20;
             this.comboBoxRoles.Name = "comboBoxRoles";
             this.comboBoxRoles.Size = new System.Drawing.Size(271, 21);
             this.comboBoxRoles.TabIndex = 15;
