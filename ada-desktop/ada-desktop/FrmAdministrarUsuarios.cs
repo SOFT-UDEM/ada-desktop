@@ -20,6 +20,13 @@ namespace ada_desktop
 
         bool listoParaGuardar = false;
 
+        private void listWithAccessRoles()
+        {
+            List<string> listWithRoles = new List<string>();
+            listWithRoles.Add("Admin");
+            listWithRoles.Add("User");
+            comboBoxRoles.DataSource = listWithRoles;
+        }
         private void validarCamposVacios() {
             if (txtNombres.Text.Trim().Length == 0)
             {
@@ -37,9 +44,9 @@ namespace ada_desktop
                 txtCargo.Focus();
                 listoParaGuardar = false;
             }
-            else if (txtRolAcceso.Text.Trim().Length == 0) {
+            else if (comboBoxRoles.Text.Trim().Length == 0) {
                 MessageBox.Show("Es requerido el rol de acceso", "Rol de acceso es requerido.", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                txtRolAcceso.Focus();
+                comboBoxRoles.Focus();
                 listoParaGuardar = false;
             }
             else if (txtUsuario.Text.Trim().Length == 0) {
@@ -71,7 +78,7 @@ namespace ada_desktop
                             Nombre = txtNombres.Text.Trim(),
                             Apellido = txtApellidos.Text.Trim(),
                             Cargo = txtCargo.Text.Trim(),
-                            RolDeAcceso = txtRolAcceso.Text.Trim(),
+                            RolDeAcceso = comboBoxRoles.Text.Trim(),
                             UserName = txtUsuario.Text.Trim(),
                             //Encriptamos contraseña
                             Password = Encrypt.GetSHA256(txtPassword.Text),
@@ -94,7 +101,7 @@ namespace ada_desktop
 
         private void FrmAdministrarUsuarios_Load(object sender, EventArgs e)
         {
-
+            listWithAccessRoles();
             using (bdsoftEntities db = new bdsoftEntities())
             {
 

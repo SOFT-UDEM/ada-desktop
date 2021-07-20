@@ -34,7 +34,6 @@
             this.txtObservacion = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtRolAcceso = new System.Windows.Forms.TextBox();
             this.txtCargo = new System.Windows.Forms.TextBox();
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.txtNombres = new System.Windows.Forms.TextBox();
@@ -47,6 +46,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dtg = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.comboBoxRoles = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -63,11 +63,11 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.comboBoxRoles);
             this.splitContainer1.Panel1.Controls.Add(this.btnGuardar);
             this.splitContainer1.Panel1.Controls.Add(this.txtObservacion);
             this.splitContainer1.Panel1.Controls.Add(this.txtPassword);
             this.splitContainer1.Panel1.Controls.Add(this.txtUsuario);
-            this.splitContainer1.Panel1.Controls.Add(this.txtRolAcceso);
             this.splitContainer1.Panel1.Controls.Add(this.txtCargo);
             this.splitContainer1.Panel1.Controls.Add(this.txtApellidos);
             this.splitContainer1.Panel1.Controls.Add(this.txtNombres);
@@ -122,13 +122,6 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(271, 20);
             this.txtUsuario.TabIndex = 11;
-            // 
-            // txtRolAcceso
-            // 
-            this.txtRolAcceso.Location = new System.Drawing.Point(536, 48);
-            this.txtRolAcceso.Name = "txtRolAcceso";
-            this.txtRolAcceso.Size = new System.Drawing.Size(271, 20);
-            this.txtRolAcceso.TabIndex = 10;
             // 
             // txtCargo
             // 
@@ -232,6 +225,14 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // comboBoxRoles
+            // 
+            this.comboBoxRoles.FormattingEnabled = true;
+            this.comboBoxRoles.Location = new System.Drawing.Point(536, 48);
+            this.comboBoxRoles.Name = "comboBoxRoles";
+            this.comboBoxRoles.Size = new System.Drawing.Size(271, 21);
+            this.comboBoxRoles.TabIndex = 15;
+            // 
             // FrmAdministrarUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -270,11 +271,11 @@
         private System.Windows.Forms.TextBox txtObservacion;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.TextBox txtRolAcceso;
         private System.Windows.Forms.TextBox txtCargo;
         private System.Windows.Forms.TextBox txtApellidos;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.DataGridView dtg;
+        private System.Windows.Forms.ComboBox comboBoxRoles;
     }
 }
