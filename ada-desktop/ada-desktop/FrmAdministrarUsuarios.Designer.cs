@@ -30,11 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.comboBoxRoles = new System.Windows.Forms.ComboBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.txtObservacion = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtRolAcceso = new System.Windows.Forms.TextBox();
             this.txtCargo = new System.Windows.Forms.TextBox();
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.txtNombres = new System.Windows.Forms.TextBox();
@@ -47,6 +48,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dtg = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.btnCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -63,11 +65,13 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.btnCancelar);
+            this.splitContainer1.Panel1.Controls.Add(this.btnEditar);
+            this.splitContainer1.Panel1.Controls.Add(this.comboBoxRoles);
             this.splitContainer1.Panel1.Controls.Add(this.btnGuardar);
             this.splitContainer1.Panel1.Controls.Add(this.txtObservacion);
             this.splitContainer1.Panel1.Controls.Add(this.txtPassword);
             this.splitContainer1.Panel1.Controls.Add(this.txtUsuario);
-            this.splitContainer1.Panel1.Controls.Add(this.txtRolAcceso);
             this.splitContainer1.Panel1.Controls.Add(this.txtCargo);
             this.splitContainer1.Panel1.Controls.Add(this.txtApellidos);
             this.splitContainer1.Panel1.Controls.Add(this.txtNombres);
@@ -87,6 +91,29 @@
             this.splitContainer1.SplitterDistance = 169;
             this.splitContainer1.TabIndex = 0;
             // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnEditar.Location = new System.Drawing.Point(226, 129);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(112, 23);
+            this.btnEditar.TabIndex = 16;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // comboBoxRoles
+            // 
+            this.comboBoxRoles.FormattingEnabled = true;
+            this.comboBoxRoles.Location = new System.Drawing.Point(536, 48);
+            this.comboBoxRoles.MaxLength = 20;
+            this.comboBoxRoles.Name = "comboBoxRoles";
+            this.comboBoxRoles.Size = new System.Drawing.Size(271, 21);
+            this.comboBoxRoles.TabIndex = 15;
+            // 
             // btnGuardar
             // 
             this.btnGuardar.BackColor = System.Drawing.SystemColors.MenuHighlight;
@@ -104,6 +131,7 @@
             // txtObservacion
             // 
             this.txtObservacion.Location = new System.Drawing.Point(536, 122);
+            this.txtObservacion.MaxLength = 100;
             this.txtObservacion.Name = "txtObservacion";
             this.txtObservacion.Size = new System.Drawing.Size(271, 20);
             this.txtObservacion.TabIndex = 13;
@@ -111,27 +139,24 @@
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(536, 87);
+            this.txtPassword.MaxLength = 64;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(271, 20);
             this.txtPassword.TabIndex = 12;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // txtUsuario
             // 
             this.txtUsuario.Location = new System.Drawing.Point(67, 83);
+            this.txtUsuario.MaxLength = 64;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(271, 20);
             this.txtUsuario.TabIndex = 11;
             // 
-            // txtRolAcceso
-            // 
-            this.txtRolAcceso.Location = new System.Drawing.Point(536, 48);
-            this.txtRolAcceso.Name = "txtRolAcceso";
-            this.txtRolAcceso.Size = new System.Drawing.Size(271, 20);
-            this.txtRolAcceso.TabIndex = 10;
-            // 
             // txtCargo
             // 
             this.txtCargo.Location = new System.Drawing.Point(67, 41);
+            this.txtCargo.MaxLength = 64;
             this.txtCargo.Name = "txtCargo";
             this.txtCargo.Size = new System.Drawing.Size(271, 20);
             this.txtCargo.TabIndex = 9;
@@ -139,6 +164,7 @@
             // txtApellidos
             // 
             this.txtApellidos.Location = new System.Drawing.Point(536, 12);
+            this.txtApellidos.MaxLength = 64;
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(271, 20);
             this.txtApellidos.TabIndex = 8;
@@ -146,6 +172,7 @@
             // txtNombres
             // 
             this.txtNombres.Location = new System.Drawing.Point(67, 6);
+            this.txtNombres.MaxLength = 64;
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.Size = new System.Drawing.Size(271, 20);
             this.txtNombres.TabIndex = 7;
@@ -223,6 +250,7 @@
             this.dtg.Location = new System.Drawing.Point(0, 0);
             this.dtg.Name = "dtg";
             this.dtg.ReadOnly = true;
+            this.dtg.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtg.Size = new System.Drawing.Size(831, 298);
             this.dtg.TabIndex = 0;
             // 
@@ -230,6 +258,21 @@
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnCancelar.Location = new System.Drawing.Point(226, 129);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(112, 23);
+            this.btnCancelar.TabIndex = 17;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Visible = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // FrmAdministrarUsuarios
             // 
@@ -269,11 +312,13 @@
         private System.Windows.Forms.TextBox txtObservacion;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.TextBox txtRolAcceso;
         private System.Windows.Forms.TextBox txtCargo;
         private System.Windows.Forms.TextBox txtApellidos;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.DataGridView dtg;
+        private System.Windows.Forms.ComboBox comboBoxRoles;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }
