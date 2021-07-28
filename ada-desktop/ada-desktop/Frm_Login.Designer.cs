@@ -79,7 +79,7 @@ namespace ada_desktop
             this.txt_pass.Name = "txt_pass";
             this.txt_pass.PasswordChar = '*';
             this.txt_pass.Size = new System.Drawing.Size(333, 29);
-            this.txt_pass.TabIndex = 3;
+            this.txt_pass.TabIndex = 2;
             // 
             // button1
             // 
@@ -89,7 +89,7 @@ namespace ada_desktop
             this.button1.Location = new System.Drawing.Point(110, 268);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(203, 39);
-            this.button1.TabIndex = 2;
+            this.button1.TabIndex = 3;
             this.button1.Text = "Entrar";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -106,10 +106,10 @@ namespace ada_desktop
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Open Sans", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(113, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(188, 37);
+            this.label1.Size = new System.Drawing.Size(181, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Ada Desktop";
             // 

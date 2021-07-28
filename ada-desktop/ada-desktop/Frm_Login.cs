@@ -29,6 +29,12 @@ namespace ada_desktop
 
                     //string userDefault = "user";
                     //string passwordDesfault = "1234";
+                    
+                    //if (loginUser == userDefault && loginPass == passwordDesfault)
+                    //{
+                    //    Frm_Dashboard das = new Frm_Dashboard();
+                    //    das.Show();
+                    //}
 
                     //Encriptación de contraseña
                     loginPass = Encrypt.GetSHA256(loginPass);
@@ -37,20 +43,16 @@ namespace ada_desktop
 
                     if (user != null)
                     {
+                        this.Hide();
                         Frm_Dashboard dash = new Frm_Dashboard();
+                        dash.FormClosed += (s, args) => this.Close();
                         dash.Show();
                     }
-
-                    //if (loginUser == userDefault && loginPass == passwordDesfault)
-                    //{
-                    //    Frm_Dashboard das = new Frm_Dashboard();
-                    //    das.Show();
-
-                    //}
                     else
                     {
                         MessageBox.Show("Las credenciales son incorrectas " , "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+
                 }
             }
             catch (Exception ex)
