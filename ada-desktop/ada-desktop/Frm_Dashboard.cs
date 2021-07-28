@@ -53,7 +53,10 @@ namespace ada_desktop
 
         private void label4_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
+            Frm_Login login = new Frm_Login();
+            login.FormClosed += (s, args) => this.Close();
+            login.Show();
         }
 
         private void btnReportes_Click(object sender, EventArgs e)
