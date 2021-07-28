@@ -102,23 +102,20 @@ namespace ada_desktop
             this.txt_pass.PasswordChar = '*';
             this.txt_pass.Size = new System.Drawing.Size(333, 29);
             this.txt_pass.TabIndex = 2;
-            // 
-<<<<<<< HEAD
-=======
+            // =======
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(110, 268);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(203, 39);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Entrar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
->>>>>>> 5cb122aed3a42961bfa7e7565cf80eb0ccaee9ce
+            //this.button1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            //this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            //this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            //this.button1.Location = new System.Drawing.Point(110, 268);
+            //this.button1.Name = "button1";
+            //this.button1.Size = new System.Drawing.Size(203, 39);
+            //this.button1.TabIndex = 3;
+            //this.button1.Text = "Entrar";
+            //this.button1.UseVisualStyleBackColor = false;
+            //this.button1.Click += new System.EventHandler(this.button1_Click);
+            //  >>>>>>> 5cb122aed3a42961bfa7e7565cf80eb0ccaee9ce
             // txt_user
             // 
             this.txt_user.BackColor = System.Drawing.SystemColors.Menu;

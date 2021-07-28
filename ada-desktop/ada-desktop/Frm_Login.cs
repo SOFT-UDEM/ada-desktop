@@ -43,17 +43,17 @@ namespace ada_desktop
 
                     if (user != null)
                     {
-<<<<<<< HEAD
+
                         Frm_Dashboard das = new Frm_Dashboard();
                         this.Hide();
                         das.Show();
 
-=======
+
                         this.Hide();
                         Frm_Dashboard dash = new Frm_Dashboard(loginUser);
                         dash.FormClosed += (s, args) => this.Close();
                         dash.Show();
->>>>>>> 5cb122aed3a42961bfa7e7565cf80eb0ccaee9ce
+
                     }
                     else
                     {

@@ -207,17 +207,15 @@
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // lblUser
-            // 
-<<<<<<< HEAD
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(3, 6);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 20);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "user";
-=======
+            // <<<<<<< HEAD
+            //this.label3.AutoSize = true;
+            //this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //this.label3.ForeColor = System.Drawing.Color.White;
+            //this.label3.Location = new System.Drawing.Point(3, 6);
+            //this.label3.Name = "label3";
+            //this.label3.Size = new System.Drawing.Size(44, 20);
+            //this.label3.TabIndex = 0;
+            //this.label3.Text = "user";
             this.lblUser.AutoSize = true;
             this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUser.Location = new System.Drawing.Point(3, 6);
@@ -225,7 +223,7 @@
             this.lblUser.Size = new System.Drawing.Size(44, 20);
             this.lblUser.TabIndex = 0;
             this.lblUser.Text = "user";
->>>>>>> 5cb122aed3a42961bfa7e7565cf80eb0ccaee9ce
+
             // 
             // panel3
             // 
