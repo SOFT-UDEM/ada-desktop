@@ -17,6 +17,11 @@ namespace ada_desktop
         {
             InitializeComponent();
         }
+        public Frm_Dashboard(String loginUser)
+        {
+            InitializeComponent();
+            lblUser.Text = loginUser;
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {

@@ -44,7 +44,7 @@ namespace ada_desktop
                     if (user != null)
                     {
                         this.Hide();
-                        Frm_Dashboard dash = new Frm_Dashboard();
+                        Frm_Dashboard dash = new Frm_Dashboard(loginUser);
                         dash.FormClosed += (s, args) => this.Close();
                         dash.Show();
                     }
