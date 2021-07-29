@@ -39,7 +39,7 @@ namespace ada_desktop
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Frm_AddEquipments user = new Frm_AddEquipments();
+            Frm_AddEquipments user = new Frm_AddEquipments(lblUser.Text);
             user.MdiParent = this;
             user.Show();
         }

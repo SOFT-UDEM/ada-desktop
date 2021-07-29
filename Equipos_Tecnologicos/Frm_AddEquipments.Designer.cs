@@ -30,6 +30,8 @@ namespace Equipos_Tecnologicos
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboEmpleado = new System.Windows.Forms.ComboBox();
+            this.comboEstado = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -41,25 +43,28 @@ namespace Equipos_Tecnologicos
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txt_estado = new System.Windows.Forms.TextBox();
             this.txt_modelo = new System.Windows.Forms.TextBox();
-            this.txt_codemple = new System.Windows.Forms.TextBox();
             this.txt_marca = new System.Windows.Forms.TextBox();
-            this.txt_valorMone = new System.Windows.Forms.TextBox();
             this.txt_serie = new System.Windows.Forms.TextBox();
-            this.txt_creado = new System.Windows.Forms.TextBox();
             this.txt_codinter = new System.Windows.Forms.TextBox();
             this.txt_obse = new System.Windows.Forms.TextBox();
             this.txt_des = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.comboUsuario = new System.Windows.Forms.ComboBox();
+            this.numericValor = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericValor)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.numericValor);
+            this.panel1.Controls.Add(this.comboUsuario);
+            this.panel1.Controls.Add(this.comboEmpleado);
+            this.panel1.Controls.Add(this.comboEstado);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label9);
@@ -71,13 +76,9 @@ namespace Equipos_Tecnologicos
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.txt_estado);
             this.panel1.Controls.Add(this.txt_modelo);
-            this.panel1.Controls.Add(this.txt_codemple);
             this.panel1.Controls.Add(this.txt_marca);
-            this.panel1.Controls.Add(this.txt_valorMone);
             this.panel1.Controls.Add(this.txt_serie);
-            this.panel1.Controls.Add(this.txt_creado);
             this.panel1.Controls.Add(this.txt_codinter);
             this.panel1.Controls.Add(this.txt_obse);
             this.panel1.Controls.Add(this.txt_des);
@@ -85,6 +86,22 @@ namespace Equipos_Tecnologicos
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(799, 241);
             this.panel1.TabIndex = 0;
+            // 
+            // comboEmpleado
+            // 
+            this.comboEmpleado.FormattingEnabled = true;
+            this.comboEmpleado.Location = new System.Drawing.Point(530, 65);
+            this.comboEmpleado.Name = "comboEmpleado";
+            this.comboEmpleado.Size = new System.Drawing.Size(232, 21);
+            this.comboEmpleado.TabIndex = 22;
+            // 
+            // comboEstado
+            // 
+            this.comboEstado.FormattingEnabled = true;
+            this.comboEstado.Location = new System.Drawing.Point(530, 30);
+            this.comboEstado.Name = "comboEstado";
+            this.comboEstado.Size = new System.Drawing.Size(232, 21);
+            this.comboEstado.TabIndex = 21;
             // 
             // button1
             // 
@@ -192,26 +209,12 @@ namespace Equipos_Tecnologicos
             this.label1.TabIndex = 10;
             this.label1.Text = "Descripción";
             // 
-            // txt_estado
-            // 
-            this.txt_estado.Location = new System.Drawing.Point(530, 26);
-            this.txt_estado.Name = "txt_estado";
-            this.txt_estado.Size = new System.Drawing.Size(232, 20);
-            this.txt_estado.TabIndex = 9;
-            // 
             // txt_modelo
             // 
             this.txt_modelo.Location = new System.Drawing.Point(130, 66);
             this.txt_modelo.Name = "txt_modelo";
             this.txt_modelo.Size = new System.Drawing.Size(232, 20);
             this.txt_modelo.TabIndex = 8;
-            // 
-            // txt_codemple
-            // 
-            this.txt_codemple.Location = new System.Drawing.Point(530, 62);
-            this.txt_codemple.Name = "txt_codemple";
-            this.txt_codemple.Size = new System.Drawing.Size(232, 20);
-            this.txt_codemple.TabIndex = 7;
             // 
             // txt_marca
             // 
@@ -220,26 +223,12 @@ namespace Equipos_Tecnologicos
             this.txt_marca.Size = new System.Drawing.Size(232, 20);
             this.txt_marca.TabIndex = 6;
             // 
-            // txt_valorMone
-            // 
-            this.txt_valorMone.Location = new System.Drawing.Point(530, 96);
-            this.txt_valorMone.Name = "txt_valorMone";
-            this.txt_valorMone.Size = new System.Drawing.Size(232, 20);
-            this.txt_valorMone.TabIndex = 5;
-            // 
             // txt_serie
             // 
             this.txt_serie.Location = new System.Drawing.Point(130, 134);
             this.txt_serie.Name = "txt_serie";
             this.txt_serie.Size = new System.Drawing.Size(232, 20);
             this.txt_serie.TabIndex = 4;
-            // 
-            // txt_creado
-            // 
-            this.txt_creado.Location = new System.Drawing.Point(530, 130);
-            this.txt_creado.Name = "txt_creado";
-            this.txt_creado.Size = new System.Drawing.Size(232, 20);
-            this.txt_creado.TabIndex = 3;
             // 
             // txt_codinter
             // 
@@ -278,6 +267,27 @@ namespace Equipos_Tecnologicos
             this.dataGridView1.Size = new System.Drawing.Size(799, 187);
             this.dataGridView1.TabIndex = 0;
             // 
+            // comboUsuario
+            // 
+            this.comboUsuario.Enabled = false;
+            this.comboUsuario.FormattingEnabled = true;
+            this.comboUsuario.Location = new System.Drawing.Point(530, 129);
+            this.comboUsuario.Name = "comboUsuario";
+            this.comboUsuario.Size = new System.Drawing.Size(232, 21);
+            this.comboUsuario.TabIndex = 23;
+            // 
+            // numericValor
+            // 
+            this.numericValor.Location = new System.Drawing.Point(530, 97);
+            this.numericValor.Maximum = new decimal(new int[] {
+            -1486618624,
+            232830643,
+            0,
+            0});
+            this.numericValor.Name = "numericValor";
+            this.numericValor.Size = new System.Drawing.Size(232, 20);
+            this.numericValor.TabIndex = 24;
+            // 
             // Frm_AddEquipments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -293,6 +303,7 @@ namespace Equipos_Tecnologicos
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericValor)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -310,18 +321,18 @@ namespace Equipos_Tecnologicos
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txt_estado;
         private System.Windows.Forms.TextBox txt_modelo;
-        private System.Windows.Forms.TextBox txt_codemple;
         private System.Windows.Forms.TextBox txt_marca;
-        private System.Windows.Forms.TextBox txt_valorMone;
         private System.Windows.Forms.TextBox txt_serie;
-        private System.Windows.Forms.TextBox txt_creado;
         private System.Windows.Forms.TextBox txt_codinter;
         private System.Windows.Forms.TextBox txt_obse;
         private System.Windows.Forms.TextBox txt_des;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox comboEstado;
+        private System.Windows.Forms.ComboBox comboEmpleado;
+        private System.Windows.Forms.ComboBox comboUsuario;
+        private System.Windows.Forms.NumericUpDown numericValor;
     }
 }

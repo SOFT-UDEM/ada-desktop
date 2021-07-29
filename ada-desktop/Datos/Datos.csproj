@@ -92,6 +92,8 @@
     <Compile Include="Usuarios.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\EmpleadosViewModel.cs" />
+    <Compile Include="ViewModel\UsuariosViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
