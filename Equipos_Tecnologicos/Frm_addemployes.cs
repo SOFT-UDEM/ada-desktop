@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Datos;
+using Datos.ViewModel;
 
 namespace Equipos_Tecnologicos
 {
@@ -38,6 +39,32 @@ namespace Equipos_Tecnologicos
             }
         }
 
+        //Este método genera una lista con las areas.
+        private void listWithAreas()
+        {
+            List<AreasViewModel> lstAreas = new List<AreasViewModel>();
+
+            using (bdsoftEntities database = new bdsoftEntities())
+            {
+                try
+                {
+                    lstAreas = (from d in database.Areas
+                                   select new AreasViewModel
+                                   {
+                                       id = d.IdArea,
+                                       nombre = d.Nombre
+                                   }).ToList();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Ocurrio un error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            comboAreas.DataSource = lstAreas;
+            comboAreas.ValueMember = "id";
+            comboAreas.DisplayMember = "nombre";
+        }
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             try
@@ -50,7 +77,7 @@ namespace Equipos_Tecnologicos
                         Apellido = txt_apell.Text,
                         Identificacion = txt_iden.Text,
                         Cargo = txt_cargo.Text,
-                        IdArea = Convert.ToInt32(txt_area.Text),
+                        IdArea = Convert.ToInt32(comboAreas.SelectedValue),
                         Observacion = txt_obs.Text
                     };
                     db.Empleados.Add(emp);
@@ -68,6 +95,7 @@ namespace Equipos_Tecnologicos
         private void Frm_addemployes_Load(object sender, EventArgs e)
         {
             updateDataInGrid();
+            listWithAreas();
         }
     }
 }
