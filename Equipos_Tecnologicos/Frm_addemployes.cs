@@ -18,6 +18,26 @@ namespace Equipos_Tecnologicos
             InitializeComponent();
         }
 
+        private void updateDataInGrid()
+        {
+            using (bdsoftEntities db = new bdsoftEntities())
+            {
+                try
+                {
+                    dataGridView1.DataSource = db.Empleados.ToList();
+                    dataGridView1.Columns["Areas"].Visible = false;
+                    dataGridView1.Columns["Asistencias"].Visible = false;
+                    dataGridView1.Columns["EquiposTecnologicos"].Visible = false;
+                    
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrio un error" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+        }
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             try
@@ -35,7 +55,7 @@ namespace Equipos_Tecnologicos
                     };
                     db.Empleados.Add(emp);
                     db.SaveChanges();
-                    dataGridView1.DataSource = db.Empleados.ToList();
+                    updateDataInGrid();
                     MessageBox.Show("Empleado guardarda correctamente", "Felicitaciones", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
@@ -47,10 +67,7 @@ namespace Equipos_Tecnologicos
 
         private void Frm_addemployes_Load(object sender, EventArgs e)
         {
-            using (bdsoftEntities db = new bdsoftEntities())
-            {
-                dataGridView1.DataSource = db.Empleados.ToList();
-            }
+            updateDataInGrid();
         }
     }
 }
