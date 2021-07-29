@@ -38,7 +38,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -150,7 +150,7 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.lblUser);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel4.Location = new System.Drawing.Point(524, 0);
             this.panel4.Name = "panel4";
@@ -169,15 +169,15 @@
             this.label4.Text = "Cerrar Sesión";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // label3
+            // lblUser
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 6);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 20);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "user";
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.Location = new System.Drawing.Point(3, 6);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(44, 20);
+            this.lblUser.TabIndex = 0;
+            this.lblUser.Text = "user";
             // 
             // panel3
             // 
@@ -233,7 +233,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel4;

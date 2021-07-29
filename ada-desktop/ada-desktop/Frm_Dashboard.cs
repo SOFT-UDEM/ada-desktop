@@ -17,6 +17,11 @@ namespace ada_desktop
         {
             InitializeComponent();
         }
+        public Frm_Dashboard(String loginUser)
+        {
+            InitializeComponent();
+            lblUser.Text = loginUser;
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -34,7 +39,7 @@ namespace ada_desktop
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Frm_AddEquipments user = new Frm_AddEquipments();
+            Frm_AddEquipments user = new Frm_AddEquipments(lblUser.Text);
             user.MdiParent = this;
             user.Show();
         }
@@ -48,7 +53,10 @@ namespace ada_desktop
 
         private void label4_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Frm_Login login = new Frm_Login();
+            login.FormClosed += (s, args) => this.Close();
+            login.Show();
         }
 
         private void btnReportes_Click(object sender, EventArgs e)

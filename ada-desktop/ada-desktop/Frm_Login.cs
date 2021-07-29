@@ -27,30 +27,31 @@ namespace ada_desktop
                     var loginUser = txt_user.Text.ToString();
                     var loginPass = txt_pass.Text.ToString();
 
-                    string userDefault = "user";
-                    string passwordDesfault = "1234";
+                    //string userDefault = "user";
+                    //string passwordDesfault = "1234";
+                    
+                    //if (loginUser == userDefault && loginPass == passwordDesfault)
+                    //{
+                    //    Frm_Dashboard das = new Frm_Dashboard();
+                    //    das.Show();
+                    //}
 
-                    //var user = db.Usuarios.Where(x => x.UserName == loginUser).Where(c => c.Password == loginPass).FirstOrDefault();
+                    //Encriptación de contraseña
+                    loginPass = Encrypt.GetSHA256(loginPass);
 
-                    // if (user != null)
-                    // {
-                    //     Frm_Dashboad dash = new Frm_Dashboad();
-                    //     dash.Show();
-                    // }
+                    var user = db.Usuarios.Where(x => x.UserName == loginUser).Where(c => c.Password == loginPass).FirstOrDefault();
 
-                    if (loginUser == userDefault && loginPass == passwordDesfault)
+                    if (user != null)
                     {
-                        Frm_Dashboard das = new Frm_Dashboard();
-                        das.Show();
-
+                        this.Hide();
+                        Frm_Dashboard dash = new Frm_Dashboard(loginUser);
+                        dash.FormClosed += (s, args) => this.Close();
+                        dash.Show();
                     }
                     else
                     {
                         MessageBox.Show("Las credenciales son incorrectas " , "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-
-                
-
 
                 }
             }
