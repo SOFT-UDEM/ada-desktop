@@ -61,6 +61,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Encrypt.cs" />
+    <Compile Include="Frm_AddAssistance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_AddAssistance.Designer.cs">
+      <DependentUpon>Frm_AddAssistance.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Reports.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmAdministrarUsuarios.resx">
       <DependentUpon>FrmAdministrarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_AddAssistance.resx">
+      <DependentUpon>Frm_AddAssistance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Reports.resx">
       <DependentUpon>Frm_Reports.cs</DependentUpon>

@@ -40,11 +40,11 @@ namespace Equipos_Tecnologicos
             this.label5 = new System.Windows.Forms.Label();
             this.txt_idarea = new System.Windows.Forms.Label();
             this.txt_iden = new System.Windows.Forms.TextBox();
-            this.txt_area = new System.Windows.Forms.TextBox();
             this.txt_cargo = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.comboAreas = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -101,11 +101,11 @@ namespace Equipos_Tecnologicos
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.comboAreas);
             this.panel2.Controls.Add(this.txt_obse);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.txt_idarea);
             this.panel2.Controls.Add(this.txt_iden);
-            this.panel2.Controls.Add(this.txt_area);
             this.panel2.Controls.Add(this.txt_cargo);
             this.panel2.Controls.Add(this.btnGuardar);
             this.panel2.Controls.Add(this.label4);
@@ -153,13 +153,6 @@ namespace Equipos_Tecnologicos
             this.txt_iden.Size = new System.Drawing.Size(244, 20);
             this.txt_iden.TabIndex = 18;
             // 
-            // txt_area
-            // 
-            this.txt_area.Location = new System.Drawing.Point(486, 73);
-            this.txt_area.Name = "txt_area";
-            this.txt_area.Size = new System.Drawing.Size(244, 20);
-            this.txt_area.TabIndex = 17;
-            // 
             // txt_cargo
             // 
             this.txt_cargo.Location = new System.Drawing.Point(486, 29);
@@ -191,12 +184,22 @@ namespace Equipos_Tecnologicos
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(781, 220);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // comboAreas
+            // 
+            this.comboAreas.FormattingEnabled = true;
+            this.comboAreas.Location = new System.Drawing.Point(487, 67);
+            this.comboAreas.Name = "comboAreas";
+            this.comboAreas.Size = new System.Drawing.Size(243, 21);
+            this.comboAreas.TabIndex = 22;
             // 
             // Frm_addemployes
             // 
@@ -230,10 +233,10 @@ namespace Equipos_Tecnologicos
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label txt_idarea;
         private System.Windows.Forms.TextBox txt_iden;
-        private System.Windows.Forms.TextBox txt_area;
         private System.Windows.Forms.TextBox txt_cargo;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox comboAreas;
     }
 }
