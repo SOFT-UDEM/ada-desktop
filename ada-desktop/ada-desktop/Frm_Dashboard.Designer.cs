@@ -41,6 +41,7 @@
             this.lblUser = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnEntradas = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -50,6 +51,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btnEntradas);
             this.panel1.Controls.Add(this.btnReportes);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
@@ -67,7 +69,7 @@
             this.btnReportes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReportes.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportes.Location = new System.Drawing.Point(10, 238);
+            this.btnReportes.Location = new System.Drawing.Point(10, 278);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Size = new System.Drawing.Size(180, 23);
             this.btnReportes.TabIndex = 6;
@@ -200,6 +202,19 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Copyright 2021";
             // 
+            // btnEntradas
+            // 
+            this.btnEntradas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEntradas.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnEntradas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEntradas.Location = new System.Drawing.Point(10, 239);
+            this.btnEntradas.Name = "btnEntradas";
+            this.btnEntradas.Size = new System.Drawing.Size(180, 23);
+            this.btnEntradas.TabIndex = 7;
+            this.btnEntradas.Text = "Registro de Asistencia";
+            this.btnEntradas.UseVisualStyleBackColor = true;
+            this.btnEntradas.Click += new System.EventHandler(this.btnEntradas_Click);
+            // 
             // Frm_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -238,6 +253,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnReportes;
+        private System.Windows.Forms.Button btnEntradas;
     }
 }
 

@@ -65,5 +65,12 @@ namespace ada_desktop
             reports.MdiParent = this;
             reports.Show();
         }
+
+        private void btnEntradas_Click(object sender, EventArgs e)
+        {
+            Frm_AddAssistance reg = new Frm_AddAssistance();
+            reg.MdiParent = this;
+            reg.Show();
+        }
     }
 }
