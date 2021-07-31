@@ -186,11 +186,11 @@ namespace Equipos_Tecnologicos
         //Este método es para actualizar en tabla equipostecnologicos
         private void updateEquipments()
         {
-            using (bdsoftEntities database = new bdsoftEntities())
+            using (bdsoftEntities db = new bdsoftEntities())
             {
                 try
                 {
-                    EquiposTecnologicos oEqu = database.EquiposTecnologicos.Find(IdEquipo);
+                    EquiposTecnologicos oEqu = db.EquiposTecnologicos.Find(IdEquipo);
                     if (oEqu != null)
                     {
                         oEqu.Descripcion = txt_des.Text;
@@ -203,7 +203,7 @@ namespace Equipos_Tecnologicos
                         oEqu.ValorMonetario = Convert.ToInt32(numericValor.Value);
                         oEqu.CreadoPorUserName = Convert.ToInt32(comboUsuario.SelectedValue);
                         oEqu.Observacion = txt_obse.Text;
-                        database.SaveChanges();
+                        db.SaveChanges();
                         MessageBox.Show("Equipo actualizado correctamente", "Felicitaciones", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         updateDataInGrid();
                         clean();
@@ -272,10 +272,10 @@ namespace Equipos_Tecnologicos
             if (IdEquipo > 0)
             {
                 txt_des.Text = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[1].Value.ToString();
-                txt_marca.Text = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[2].Value.ToString();
-                txt_marca.Text = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[3].Value.ToString();
-                txt_serie.Text = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[4].Value.ToString();
-                txt_codinter.Text = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[5].Value.ToString();
+                txt_modelo.Text = Convert.ToString(dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[2].Value);
+                txt_marca.Text = Convert.ToString(dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[3].Value);
+                txt_serie.Text = Convert.ToString(dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[4].Value);
+                txt_codinter.Text = Convert.ToString(dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[5].Value);
                 comboEstado.Text = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[6].Value.ToString();
                 numericValor.Value = Convert.ToInt32(dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[7].Value);
                 txt_obse.Text = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[10].Value.ToString();
