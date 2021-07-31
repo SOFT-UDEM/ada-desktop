@@ -36,6 +36,7 @@ namespace Equipos_Tecnologicos
             this.txt_apell = new System.Windows.Forms.TextBox();
             this.txt_name = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.comboAreas = new System.Windows.Forms.ComboBox();
             this.txt_obse = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_idarea = new System.Windows.Forms.Label();
@@ -44,7 +45,8 @@ namespace Equipos_Tecnologicos
             this.btnGuardar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboAreas = new System.Windows.Forms.ComboBox();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -104,6 +106,8 @@ namespace Equipos_Tecnologicos
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnCancelar);
+            this.panel2.Controls.Add(this.btnActualizar);
             this.panel2.Controls.Add(this.comboAreas);
             this.panel2.Controls.Add(this.txt_obse);
             this.panel2.Controls.Add(this.label5);
@@ -121,6 +125,14 @@ namespace Equipos_Tecnologicos
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(776, 194);
             this.panel2.TabIndex = 2;
+            // 
+            // comboAreas
+            // 
+            this.comboAreas.FormattingEnabled = true;
+            this.comboAreas.Location = new System.Drawing.Point(487, 68);
+            this.comboAreas.Name = "comboAreas";
+            this.comboAreas.Size = new System.Drawing.Size(243, 21);
+            this.comboAreas.TabIndex = 23;
             // 
             // txt_obse
             // 
@@ -190,20 +202,48 @@ namespace Equipos_Tecnologicos
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(781, 220);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
-            // comboAreas
+            // btnActualizar
             // 
-            this.comboAreas.FormattingEnabled = true;
-            this.comboAreas.Location = new System.Drawing.Point(487, 68);
-            this.comboAreas.Name = "comboAreas";
-            this.comboAreas.Size = new System.Drawing.Size(243, 21);
-            this.comboAreas.TabIndex = 23;
+            this.btnActualizar.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnActualizar.Enabled = false;
+            this.btnActualizar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnActualizar.Location = new System.Drawing.Point(213, 154);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(112, 23);
+            this.btnActualizar.TabIndex = 24;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnCancelar.Enabled = false;
+            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnCancelar.Location = new System.Drawing.Point(345, 154);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(112, 23);
+            this.btnCancelar.TabIndex = 25;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // Frm_addemployes
             // 
@@ -243,5 +283,7 @@ namespace Equipos_Tecnologicos
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox comboAreas;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnActualizar;
     }
 }
