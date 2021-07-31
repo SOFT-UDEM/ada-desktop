@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Datos;
+using Datos.ViewModel;
 
 namespace Equipos_Tecnologicos
 {
@@ -17,7 +18,50 @@ namespace Equipos_Tecnologicos
         {
             InitializeComponent();
         }
+        private void updateDataInGrid()
+        {
+            using (bdsoftEntities db = new bdsoftEntities())
+            {
+                try
+                {
+                    dataGridView1.DataSource = db.Empleados.ToList();
+                    dataGridView1.Columns["Areas"].Visible = false;
+                    dataGridView1.Columns["Asistencias"].Visible = false;
+                    dataGridView1.Columns["EquiposTecnologicos"].Visible = false;
 
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrio un error" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+        }
+        //Este método genera una lista con las areas.
+        private void listWithAreas()
+        {
+            List<AreasViewModel> lstAreas = new List<AreasViewModel>();
+
+            using (bdsoftEntities database = new bdsoftEntities())
+            {
+                try
+                {
+                    lstAreas = (from d in database.Areas
+                                select new AreasViewModel
+                                {
+                                    id = d.IdArea,
+                                    nombre = d.Nombre
+                                }).ToList();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Ocurrio un error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            comboAreas.DataSource = lstAreas;
+            comboAreas.ValueMember = "id";
+            comboAreas.DisplayMember = "nombre";
+        }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             try
@@ -30,12 +74,12 @@ namespace Equipos_Tecnologicos
                         Apellido = txt_apell.Text,
                         Identificacion = txt_iden.Text,
                         Cargo = txt_cargo.Text,
-                        IdArea = Convert.ToInt32(txt_area.Text),
+                        IdArea = Convert.ToInt32(comboAreas.SelectedValue),
                         Observacion = txt_obs.Text
                     };
                     db.Empleados.Add(emp);
                     db.SaveChanges();
-                    dataGridView1.DataSource = db.Empleados.ToList();
+                    updateDataInGrid();
                     MessageBox.Show("Empleado guardarda correctamente", "Felicitaciones", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
@@ -43,14 +87,13 @@ namespace Equipos_Tecnologicos
             {
                 MessageBox.Show("Ocurrio el error " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
 
         private void Frm_addemployes_Load(object sender, EventArgs e)
         {
-            using (bdsoftEntities db = new bdsoftEntities())
-            {
-                dataGridView1.DataSource = db.Empleados.ToList();
-            }
+            updateDataInGrid();
+            listWithAreas();
         }
     }
 }
