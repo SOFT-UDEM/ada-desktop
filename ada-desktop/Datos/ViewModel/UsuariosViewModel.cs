@@ -12,4 +12,3 @@ namespace Datos.ViewModel
         public string nombre { get; set; }
     }
 }
-}
