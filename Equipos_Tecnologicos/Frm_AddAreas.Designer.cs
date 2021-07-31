@@ -39,6 +39,8 @@ namespace Equipos_Tecnologicos
             this.txt_obs = new System.Windows.Forms.TextBox();
             this.txt_func = new System.Windows.Forms.TextBox();
             this.txt_name = new System.Windows.Forms.TextBox();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -66,9 +68,12 @@ namespace Equipos_Tecnologicos
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(776, 226);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnCancelar);
+            this.panel2.Controls.Add(this.btnActualizar);
             this.panel2.Controls.Add(this.btnGuardar);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
@@ -154,6 +159,36 @@ namespace Equipos_Tecnologicos
             this.txt_name.TabIndex = 0;
             this.txt_name.TextChanged += new System.EventHandler(this.txt_name_TextChanged);
             // 
+            // btnActualizar
+            // 
+            this.btnActualizar.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnActualizar.Enabled = false;
+            this.btnActualizar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnActualizar.Location = new System.Drawing.Point(213, 154);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(112, 23);
+            this.btnActualizar.TabIndex = 16;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnCancelar.Enabled = false;
+            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnCancelar.Location = new System.Drawing.Point(342, 154);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(112, 23);
+            this.btnCancelar.TabIndex = 17;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // Frm_AddAreas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -186,5 +221,7 @@ namespace Equipos_Tecnologicos
         private System.Windows.Forms.TextBox txt_name;
         private System.Windows.Forms.Button btnGuardar;
         protected System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnActualizar;
     }
 }
