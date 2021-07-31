@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.iconButton13 = new FontAwesome.Sharp.IconButton();
             this.pa_reports = new System.Windows.Forms.Panel();
             this.iconButton12 = new FontAwesome.Sharp.IconButton();
             this.iconButton11 = new FontAwesome.Sharp.IconButton();
@@ -49,7 +50,6 @@
             this.lblUser = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.iconButton13 = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.pa_reports.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -73,6 +73,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(269, 749);
             this.panel1.TabIndex = 1;
+            // 
+            // iconButton13
+            // 
+            this.iconButton13.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton13.FlatAppearance.BorderSize = 0;
+            this.iconButton13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton13.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton13.ForeColor = System.Drawing.Color.White;
+            this.iconButton13.IconChar = FontAwesome.Sharp.IconChar.UserCheck;
+            this.iconButton13.IconColor = System.Drawing.Color.White;
+            this.iconButton13.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton13.IconSize = 35;
+            this.iconButton13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton13.Location = new System.Drawing.Point(19, 312);
+            this.iconButton13.Name = "iconButton13";
+            this.iconButton13.Size = new System.Drawing.Size(244, 44);
+            this.iconButton13.TabIndex = 13;
+            this.iconButton13.Text = "Asistencia Empleados";
+            this.iconButton13.UseVisualStyleBackColor = true;
+            this.iconButton13.Click += new System.EventHandler(this.iconButton13_Click);
             // 
             // pa_reports
             // 
@@ -364,10 +384,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(3, 26);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 13);
+            this.label4.Size = new System.Drawing.Size(83, 13);
             this.label4.TabIndex = 1;
             this.label4.Text = "Cerrar Sesión";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -376,6 +397,7 @@
             // 
             this.lblUser.AutoSize = true;
             this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.ForeColor = System.Drawing.Color.White;
             this.lblUser.Location = new System.Drawing.Point(3, 6);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(44, 20);
@@ -402,26 +424,6 @@
             this.label2.Size = new System.Drawing.Size(159, 25);
             this.label2.TabIndex = 6;
             this.label2.Text = "Copyright 2021";
-            // 
-            // iconButton13
-            // 
-            this.iconButton13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton13.FlatAppearance.BorderSize = 0;
-            this.iconButton13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton13.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton13.ForeColor = System.Drawing.Color.White;
-            this.iconButton13.IconChar = FontAwesome.Sharp.IconChar.UserCheck;
-            this.iconButton13.IconColor = System.Drawing.Color.White;
-            this.iconButton13.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton13.IconSize = 35;
-            this.iconButton13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton13.Location = new System.Drawing.Point(19, 312);
-            this.iconButton13.Name = "iconButton13";
-            this.iconButton13.Size = new System.Drawing.Size(244, 44);
-            this.iconButton13.TabIndex = 13;
-            this.iconButton13.Text = "Asistencia Empleados";
-            this.iconButton13.UseVisualStyleBackColor = true;
-            this.iconButton13.Click += new System.EventHandler(this.iconButton13_Click);
             // 
             // Frm_Dashboard
             // 
