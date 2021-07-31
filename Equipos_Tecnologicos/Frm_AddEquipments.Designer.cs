@@ -30,7 +30,7 @@ namespace Equipos_Tecnologicos
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -41,26 +41,37 @@ namespace Equipos_Tecnologicos
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txt_estado = new System.Windows.Forms.TextBox();
             this.txt_modelo = new System.Windows.Forms.TextBox();
-            this.txt_codemple = new System.Windows.Forms.TextBox();
             this.txt_marca = new System.Windows.Forms.TextBox();
-            this.txt_valorMone = new System.Windows.Forms.TextBox();
             this.txt_serie = new System.Windows.Forms.TextBox();
-            this.txt_creado = new System.Windows.Forms.TextBox();
             this.txt_codinter = new System.Windows.Forms.TextBox();
             this.txt_obse = new System.Windows.Forms.TextBox();
             this.txt_des = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.numericValor = new System.Windows.Forms.NumericUpDown();
+            this.comboUsuario = new System.Windows.Forms.ComboBox();
+            this.comboEmpleado = new System.Windows.Forms.ComboBox();
+            this.comboEstado = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericValor)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.numericValor);
+            this.panel1.Controls.Add(this.comboUsuario);
+            this.panel1.Controls.Add(this.comboEmpleado);
+            this.panel1.Controls.Add(this.comboEstado);
+            this.panel1.Controls.Add(this.btnDelete);
+            this.panel1.Controls.Add(this.btnCancel);
+            this.panel1.Controls.Add(this.btnUpdate);
+            this.panel1.Controls.Add(this.btnSave);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label8);
@@ -71,13 +82,9 @@ namespace Equipos_Tecnologicos
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.txt_estado);
             this.panel1.Controls.Add(this.txt_modelo);
-            this.panel1.Controls.Add(this.txt_codemple);
             this.panel1.Controls.Add(this.txt_marca);
-            this.panel1.Controls.Add(this.txt_valorMone);
             this.panel1.Controls.Add(this.txt_serie);
-            this.panel1.Controls.Add(this.txt_creado);
             this.panel1.Controls.Add(this.txt_codinter);
             this.panel1.Controls.Add(this.txt_obse);
             this.panel1.Controls.Add(this.txt_des);
@@ -86,19 +93,19 @@ namespace Equipos_Tecnologicos
             this.panel1.Size = new System.Drawing.Size(799, 241);
             this.panel1.TabIndex = 0;
             // 
-            // button1
+            // btnSave
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(130, 204);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 23);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Guardar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnSave.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnSave.Location = new System.Drawing.Point(130, 204);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(124, 23);
+            this.btnSave.TabIndex = 20;
+            this.btnSave.Text = "Guardar";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label10
             // 
@@ -119,7 +126,6 @@ namespace Equipos_Tecnologicos
             this.label9.Size = new System.Drawing.Size(37, 13);
             this.label9.TabIndex = 18;
             this.label9.Text = "Marca";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label8
             // 
@@ -160,7 +166,6 @@ namespace Equipos_Tecnologicos
             this.label5.Size = new System.Drawing.Size(90, 13);
             this.label5.TabIndex = 14;
             this.label5.Text = "Código Empleado";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
@@ -202,26 +207,12 @@ namespace Equipos_Tecnologicos
             this.label1.TabIndex = 10;
             this.label1.Text = "Descripción";
             // 
-            // txt_estado
-            // 
-            this.txt_estado.Location = new System.Drawing.Point(530, 26);
-            this.txt_estado.Name = "txt_estado";
-            this.txt_estado.Size = new System.Drawing.Size(232, 20);
-            this.txt_estado.TabIndex = 9;
-            // 
             // txt_modelo
             // 
             this.txt_modelo.Location = new System.Drawing.Point(130, 66);
             this.txt_modelo.Name = "txt_modelo";
             this.txt_modelo.Size = new System.Drawing.Size(232, 20);
             this.txt_modelo.TabIndex = 8;
-            // 
-            // txt_codemple
-            // 
-            this.txt_codemple.Location = new System.Drawing.Point(530, 62);
-            this.txt_codemple.Name = "txt_codemple";
-            this.txt_codemple.Size = new System.Drawing.Size(232, 20);
-            this.txt_codemple.TabIndex = 7;
             // 
             // txt_marca
             // 
@@ -230,26 +221,12 @@ namespace Equipos_Tecnologicos
             this.txt_marca.Size = new System.Drawing.Size(232, 20);
             this.txt_marca.TabIndex = 6;
             // 
-            // txt_valorMone
-            // 
-            this.txt_valorMone.Location = new System.Drawing.Point(530, 96);
-            this.txt_valorMone.Name = "txt_valorMone";
-            this.txt_valorMone.Size = new System.Drawing.Size(232, 20);
-            this.txt_valorMone.TabIndex = 5;
-            // 
             // txt_serie
             // 
             this.txt_serie.Location = new System.Drawing.Point(130, 134);
             this.txt_serie.Name = "txt_serie";
             this.txt_serie.Size = new System.Drawing.Size(232, 20);
             this.txt_serie.TabIndex = 4;
-            // 
-            // txt_creado
-            // 
-            this.txt_creado.Location = new System.Drawing.Point(530, 130);
-            this.txt_creado.Name = "txt_creado";
-            this.txt_creado.Size = new System.Drawing.Size(232, 20);
-            this.txt_creado.TabIndex = 3;
             // 
             // txt_codinter
             // 
@@ -282,11 +259,98 @@ namespace Equipos_Tecnologicos
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(0, 3);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(799, 223);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnDelete.Enabled = false;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnDelete.Location = new System.Drawing.Point(553, 204);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(124, 23);
+            this.btnDelete.TabIndex = 30;
+            this.btnDelete.Text = "Eliminar";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnCancel.Enabled = false;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnCancel.Location = new System.Drawing.Point(410, 204);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(124, 23);
+            this.btnCancel.TabIndex = 29;
+            this.btnCancel.Text = "Cancelar";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnUpdate.Enabled = false;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnUpdate.Location = new System.Drawing.Point(270, 204);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(124, 23);
+            this.btnUpdate.TabIndex = 28;
+            this.btnUpdate.Text = "Actualizar";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // numericValor
+            // 
+            this.numericValor.Location = new System.Drawing.Point(530, 97);
+            this.numericValor.Maximum = new decimal(new int[] {
+            -1486618624,
+            232830643,
+            0,
+            0});
+            this.numericValor.Name = "numericValor";
+            this.numericValor.Size = new System.Drawing.Size(232, 20);
+            this.numericValor.TabIndex = 34;
+            // 
+            // comboUsuario
+            // 
+            this.comboUsuario.Enabled = false;
+            this.comboUsuario.FormattingEnabled = true;
+            this.comboUsuario.Location = new System.Drawing.Point(530, 129);
+            this.comboUsuario.Name = "comboUsuario";
+            this.comboUsuario.Size = new System.Drawing.Size(232, 21);
+            this.comboUsuario.TabIndex = 33;
+            // 
+            // comboEmpleado
+            // 
+            this.comboEmpleado.FormattingEnabled = true;
+            this.comboEmpleado.Location = new System.Drawing.Point(530, 65);
+            this.comboEmpleado.Name = "comboEmpleado";
+            this.comboEmpleado.Size = new System.Drawing.Size(232, 21);
+            this.comboEmpleado.TabIndex = 32;
+            // 
+            // comboEstado
+            // 
+            this.comboEstado.FormattingEnabled = true;
+            this.comboEstado.Location = new System.Drawing.Point(530, 30);
+            this.comboEstado.Name = "comboEstado";
+            this.comboEstado.Size = new System.Drawing.Size(232, 21);
+            this.comboEstado.TabIndex = 31;
             // 
             // Frm_AddEquipments
             // 
@@ -304,6 +368,7 @@ namespace Equipos_Tecnologicos
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericValor)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -321,18 +386,21 @@ namespace Equipos_Tecnologicos
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txt_estado;
         private System.Windows.Forms.TextBox txt_modelo;
-        private System.Windows.Forms.TextBox txt_codemple;
         private System.Windows.Forms.TextBox txt_marca;
-        private System.Windows.Forms.TextBox txt_valorMone;
         private System.Windows.Forms.TextBox txt_serie;
-        private System.Windows.Forms.TextBox txt_creado;
         private System.Windows.Forms.TextBox txt_codinter;
         private System.Windows.Forms.TextBox txt_obse;
         private System.Windows.Forms.TextBox txt_des;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.NumericUpDown numericValor;
+        private System.Windows.Forms.ComboBox comboUsuario;
+        private System.Windows.Forms.ComboBox comboEmpleado;
+        private System.Windows.Forms.ComboBox comboEstado;
     }
 }
