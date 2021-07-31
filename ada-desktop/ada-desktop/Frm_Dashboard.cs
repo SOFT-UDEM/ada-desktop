@@ -173,5 +173,12 @@ namespace ada_desktop
             areas.MdiParent = this;
             areas.Show();
         }
+
+        private void iconButton13_Click(object sender, EventArgs e)
+        {
+            Frm_AsistenciaEmpleados asistencia = new Frm_AsistenciaEmpleados();
+            asistencia.MdiParent = this;
+            asistencia.Show();
+        }
     }
 }

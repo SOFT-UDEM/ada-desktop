@@ -158,6 +158,12 @@
     <Compile Include="Frm_areas.Designer.cs">
       <DependentUpon>Frm_areas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_AsistenciaEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_AsistenciaEmpleados.Designer.cs">
+      <DependentUpon>Frm_AsistenciaEmpleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_EntradaSalidaPersonal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_areas.resx">
       <DependentUpon>Frm_areas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_AsistenciaEmpleados.resx">
+      <DependentUpon>Frm_AsistenciaEmpleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_EntradaSalidaPersonal.resx">
       <DependentUpon>Frm_EntradaSalidaPersonal.cs</DependentUpon>
