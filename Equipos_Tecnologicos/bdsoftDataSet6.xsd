@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="bdsoftDataSet6" targetNamespace="http://tempuri.org/bdsoftDataSet6.xsd" xmlns:mstns="http://tempuri.org/bdsoftDataSet6.xsd" xmlns="http://tempuri.org/bdsoftDataSet6.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="bdsoftConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="bdsoftConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Equipos_Tecnologicos.Properties.Settings.GlobalReference.Default.bdsoftConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Vw_ListaDeTodosLosEquiposTableAdapter" GeneratorDataComponentClassName="Vw_ListaDeTodosLosEquiposTableAdapter" Name="Vw_ListaDeTodosLosEquipos" UserDataComponentName="Vw_ListaDeTodosLosEquiposTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="bdsoftConnectionString (Settings)" DbObjectName="bdsoft.dbo.Vw_ListaDeTodosLosEquipos" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT IdEquipo, Descripcion, Modelo, Marca, NumeroDeSerie, CodigoInterno, Estado, Empleado, ValorMonetario, Usuario, Observacion FROM dbo.Vw_ListaDeTodosLosEquipos</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IdEquipo" DataSetColumn="IdEquipo" />
+              <Mapping SourceColumn="Descripcion" DataSetColumn="Descripcion" />
+              <Mapping SourceColumn="Modelo" DataSetColumn="Modelo" />
+              <Mapping SourceColumn="Marca" DataSetColumn="Marca" />
+              <Mapping SourceColumn="NumeroDeSerie" DataSetColumn="NumeroDeSerie" />
+              <Mapping SourceColumn="CodigoInterno" DataSetColumn="CodigoInterno" />
+              <Mapping SourceColumn="Estado" DataSetColumn="Estado" />
+              <Mapping SourceColumn="Empleado" DataSetColumn="Empleado" />
+              <Mapping SourceColumn="ValorMonetario" DataSetColumn="ValorMonetario" />
+              <Mapping SourceColumn="Usuario" DataSetColumn="Usuario" />
+              <Mapping SourceColumn="Observacion" DataSetColumn="Observacion" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="bdsoftDataSet6" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="bdsoftDataSet6" msprop:Generator_UserDSName="bdsoftDataSet6">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Vw_ListaDeTodosLosEquipos" msprop:Generator_TableClassName="Vw_ListaDeTodosLosEquiposDataTable" msprop:Generator_TableVarName="tableVw_ListaDeTodosLosEquipos" msprop:Generator_TablePropName="Vw_ListaDeTodosLosEquipos" msprop:Generator_RowDeletingName="Vw_ListaDeTodosLosEquiposRowDeleting" msprop:Generator_RowChangingName="Vw_ListaDeTodosLosEquiposRowChanging" msprop:Generator_RowEvHandlerName="Vw_ListaDeTodosLosEquiposRowChangeEventHandler" msprop:Generator_RowDeletedName="Vw_ListaDeTodosLosEquiposRowDeleted" msprop:Generator_UserTableName="Vw_ListaDeTodosLosEquipos" msprop:Generator_RowChangedName="Vw_ListaDeTodosLosEquiposRowChanged" msprop:Generator_RowEvArgName="Vw_ListaDeTodosLosEquiposRowChangeEvent" msprop:Generator_RowClassName="Vw_ListaDeTodosLosEquiposRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdEquipo" msprop:Generator_ColumnVarNameInTable="columnIdEquipo" msprop:Generator_ColumnPropNameInRow="IdEquipo" msprop:Generator_ColumnPropNameInTable="IdEquipoColumn" msprop:Generator_UserColumnName="IdEquipo" type="xs:int" />
+              <xs:element name="Descripcion" msprop:Generator_ColumnVarNameInTable="columnDescripcion" msprop:Generator_ColumnPropNameInRow="Descripcion" msprop:Generator_ColumnPropNameInTable="DescripcionColumn" msprop:Generator_UserColumnName="Descripcion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Modelo" msprop:Generator_ColumnVarNameInTable="columnModelo" msprop:Generator_ColumnPropNameInRow="Modelo" msprop:Generator_ColumnPropNameInTable="ModeloColumn" msprop:Generator_UserColumnName="Modelo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="64" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Marca" msprop:Generator_ColumnVarNameInTable="columnMarca" msprop:Generator_ColumnPropNameInRow="Marca" msprop:Generator_ColumnPropNameInTable="MarcaColumn" msprop:Generator_UserColumnName="Marca" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="64" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NumeroDeSerie" msprop:Generator_ColumnVarNameInTable="columnNumeroDeSerie" msprop:Generator_ColumnPropNameInRow="NumeroDeSerie" msprop:Generator_ColumnPropNameInTable="NumeroDeSerieColumn" msprop:Generator_UserColumnName="NumeroDeSerie" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="64" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CodigoInterno" msprop:Generator_ColumnVarNameInTable="columnCodigoInterno" msprop:Generator_ColumnPropNameInRow="CodigoInterno" msprop:Generator_ColumnPropNameInTable="CodigoInternoColumn" msprop:Generator_UserColumnName="CodigoInterno" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="64" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Estado" msprop:Generator_ColumnVarNameInTable="columnEstado" msprop:Generator_ColumnPropNameInRow="Estado" msprop:Generator_ColumnPropNameInTable="EstadoColumn" msprop:Generator_UserColumnName="Estado" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Empleado" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnEmpleado" msprop:Generator_ColumnPropNameInRow="Empleado" msprop:Generator_ColumnPropNameInTable="EmpleadoColumn" msprop:Generator_UserColumnName="Empleado" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="129" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ValorMonetario" msprop:Generator_ColumnVarNameInTable="columnValorMonetario" msprop:Generator_ColumnPropNameInRow="ValorMonetario" msprop:Generator_ColumnPropNameInTable="ValorMonetarioColumn" msprop:Generator_UserColumnName="ValorMonetario" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Usuario" msprop:Generator_ColumnVarNameInTable="columnUsuario" msprop:Generator_ColumnPropNameInRow="Usuario" msprop:Generator_ColumnPropNameInTable="UsuarioColumn" msprop:Generator_UserColumnName="Usuario" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="64" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Observacion" msprop:Generator_ColumnVarNameInTable="columnObservacion" msprop:Generator_ColumnPropNameInRow="Observacion" msprop:Generator_ColumnPropNameInTable="ObservacionColumn" msprop:Generator_UserColumnName="Observacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Vw_ListaDeTodosLosEquipos" />
+      <xs:field xpath="mstns:IdEquipo" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

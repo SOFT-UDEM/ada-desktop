@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\ada-desktop\packages\EntityFramework.6.4.0\build\EntityFramework.props" Condition="Exists('..\ada-desktop\packages\EntityFramework.6.4.0\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0A8BD9C2-B714-41E3-BD97-60267690BF8E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Equipos_Tecnologicos</RootNamespace>
+    <AssemblyName>Equipos_Tecnologicos</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\ada-desktop\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\ada-desktop\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\ada-desktop\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\ada-desktop\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\ada-desktop\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\ada-desktop\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\ada-desktop\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\ada-desktop\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="bdsoftDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdsoftDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bdsoftDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdsoftDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bdsoftDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdsoftDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bdsoftDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdsoftDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bdsoftDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdsoftDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bdsoftDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdsoftDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bdsoftDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdsoftDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bdsoftDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdsoftDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bdsoftDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdsoftDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_addemployes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_addemployes.Designer.cs">
+      <DependentUpon>Frm_addemployes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_AddAreas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_AddAreas.Designer.cs">
+      <DependentUpon>Frm_AddAreas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_AddEquipments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_AddEquipments.Designer.cs">
+      <DependentUpon>Frm_AddEquipments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_AddUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_AddUsers.Designer.cs">
+      <DependentUpon>Frm_AddUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_areas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_areas.Designer.cs">
+      <DependentUpon>Frm_areas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_EntradaSalidaPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_EntradaSalidaPersonal.Designer.cs">
+      <DependentUpon>Frm_EntradaSalidaPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_EntradaSalidaPersonalAreas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_EntradaSalidaPersonalAreas.Designer.cs">
+      <DependentUpon>Frm_EntradaSalidaPersonalAreas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Inventario_costos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Inventario_costos.Designer.cs">
+      <DependentUpon>Frm_Inventario_costos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_ListaDeEquipoPorAreas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ListaDeEquipoPorAreas.Designer.cs">
+      <DependentUpon>Frm_ListaDeEquipoPorAreas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_ListaDeTodosLosEquipos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ListaDeTodosLosEquipos.Designer.cs">
+      <DependentUpon>Frm_ListaDeTodosLosEquipos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_listaEmpleadosPorAreas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_listaEmpleadosPorAreas.Designer.cs">
+      <DependentUpon>Frm_listaEmpleadosPorAreas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Frm_AddAreas.resx">
+      <DependentUpon>Frm_AddAreas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_addemployes.resx">
+      <DependentUpon>Frm_addemployes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_AddEquipments.resx">
+      <DependentUpon>Frm_AddEquipments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_areas.resx">
+      <DependentUpon>Frm_areas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_EntradaSalidaPersonal.resx">
+      <DependentUpon>Frm_EntradaSalidaPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_EntradaSalidaPersonalAreas.resx">
+      <DependentUpon>Frm_EntradaSalidaPersonalAreas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Inventario_costos.resx">
+      <DependentUpon>Frm_Inventario_costos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ListaDeEquipoPorAreas.resx">
+      <DependentUpon>Frm_ListaDeEquipoPorAreas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ListaDeTodosLosEquipos.resx">
+      <DependentUpon>Frm_ListaDeTodosLosEquipos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_listaEmpleadosPorAreas.resx">
+      <DependentUpon>Frm_listaEmpleadosPorAreas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Reports\areas.rdlc" />
+    <EmbeddedResource Include="Reports\EmpleadosPorAreas.rdlc" />
+    <EmbeddedResource Include="Reports\EntradasSalidasPersonal.rdlc" />
+    <EmbeddedResource Include="Reports\EntradasSalidasPersonalAreas.rdlc" />
+    <EmbeddedResource Include="Reports\InventarioCostos.rdlc" />
+    <EmbeddedResource Include="Reports\InventarioGeneral.rdlc" />
+    <EmbeddedResource Include="Reports\ListaDeEquiposPorAreas.rdlc" />
+    <None Include="bdsoftDataSet.xsc">
+      <DependentUpon>bdsoftDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bdsoftDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdsoftDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdsoftDataSet.xss">
+      <DependentUpon>bdsoftDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bdsoftDataSet1.xsc">
+      <DependentUpon>bdsoftDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="bdsoftDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdsoftDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdsoftDataSet1.xss">
+      <DependentUpon>bdsoftDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="bdsoftDataSet2.xsc">
+      <DependentUpon>bdsoftDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="bdsoftDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdsoftDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdsoftDataSet2.xss">
+      <DependentUpon>bdsoftDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="bdsoftDataSet3.xsc">
+      <DependentUpon>bdsoftDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="bdsoftDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdsoftDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdsoftDataSet3.xss">
+      <DependentUpon>bdsoftDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="bdsoftDataSet4.xsc">
+      <DependentUpon>bdsoftDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="bdsoftDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdsoftDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdsoftDataSet4.xss">
+      <DependentUpon>bdsoftDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="bdsoftDataSet5.xsc">
+      <DependentUpon>bdsoftDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="bdsoftDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdsoftDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdsoftDataSet5.xss">
+      <DependentUpon>bdsoftDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="bdsoftDataSet6.xsc">
+      <DependentUpon>bdsoftDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="bdsoftDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdsoftDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdsoftDataSet6.xss">
+      <DependentUpon>bdsoftDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="bdsoftDataSet7.xsc">
+      <DependentUpon>bdsoftDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="bdsoftDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdsoftDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdsoftDataSet7.xss">
+      <DependentUpon>bdsoftDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="bdsoftDataSet8.xsc">
+      <DependentUpon>bdsoftDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="bdsoftDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdsoftDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdsoftDataSet8.xss">
+      <DependentUpon>bdsoftDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ada-desktop\Datos\Datos.csproj">
+      <Project>{f4dbdf1e-c5d1-44c9-b124-fa0ae6018f1c}</Project>
+      <Name>Datos</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\ada-desktop\packages\EntityFramework.6.4.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\ada-desktop\packages\EntityFramework.6.4.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\ada-desktop\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\ada-desktop\packages\EntityFramework.6.4.0\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\ada-desktop\packages\EntityFramework.6.4.0\build\EntityFramework.targets" Condition="Exists('..\ada-desktop\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
