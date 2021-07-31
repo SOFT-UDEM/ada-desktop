@@ -33,6 +33,7 @@ namespace Equipos_Tecnologicos
                     db.Areas.Add(area);
                     db.SaveChanges();
                     dataGridView1.DataSource = db.Areas.ToList();
+                    dataGridView1.Columns["Empleados"].Visible = false;
                     MessageBox.Show("Área guardarda correctamente", "Felicitaciones", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
